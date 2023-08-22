@@ -25,10 +25,10 @@
                     <div class="card-body text-center">
                         <h2 class="card-title">¡Registro Exitoso!</h2>
                         <p class="card-text">El alumno ha sido registrado correctamente.</p>
-                        <p><strong>Nombre:</strong> <span id="nombre"></span></p>
-                        <p><strong>Apellidos:</strong> <span id="apellidos"></span></p>
-                        <p><strong>Edad:</strong> <span id="edad"></span></p>
-                        <p><strong>Correo:</strong> <span id="correo"></span></p>
+                        <p><strong>Nombre:</strong> <?php echo $_POST["nombre"]; ?></p>
+                        <p><strong>Apellidos:</strong> <?php echo $_POST["apellidos"]; ?></p>
+                        <p><strong>Edad:</strong> <?php echo $_POST["edad"]; ?></p>
+                        <p><strong>Correo:</strong> <?php echo $_POST["correo"]; ?></p>
                     </div>
                 </div>
             </div>
@@ -36,16 +36,11 @@
     </div>
 
     <div class="container-fluid fixed-bottom text-muted text-center py-2">
-        Ing. Kevin C. Lopez Gonzalez | Fecha: 20 de Agosto, 2023 | Ing. Sistemas Computacionales | UVEG |
-        Ing. Dora Alicia Álvarez Medina
+        <?php
+        echo "Ing. Kevin C. Lopez Gonzalez | Fecha: " . date("d de F, Y") . " | Ing. Sistemas Computacionales | UVEG | Ing. Dora Alicia Álvarez Medina";
+        ?>
     </div>
 
-    <script>
-        document.getElementById("nombre").textContent = localStorage.getItem("nombre");
-        document.getElementById("apellidos").textContent = localStorage.getItem("apellidos");
-        document.getElementById("edad").textContent = localStorage.getItem("edad");
-        document.getElementById("correo").textContent = localStorage.getItem("correo");
-    </script>
 </body>
 
 </html>

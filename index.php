@@ -22,7 +22,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h1 class="text-center">Registrar Alumno</h1>
-                <form id="registro-form" action="card.html">
+                <form id="registro-form" action="card.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -50,11 +50,12 @@
     </div>
 
     <div class="container-fluid fixed-bottom text-muted text-center py-2">
-        Ing. Kevin C. Lopez Gonzalez | Fecha: 20 de Agosto, 2023 | Ing. Sistemas Computacionales | UVEG |
-        Ing. Dora Alicia Álvarez Medina
+        <?php
+        echo "Ing. Kevin C. Lopez Gonzalez | Fecha: " . date("d de F, Y") . " | Ing. Sistemas Computacionales | UVEG | Ing. Dora Alicia Álvarez Medina";
+        ?>
     </div>
 
-    <script src="registro.js"></script>
 </body>
 
 </html>
+
